@@ -139,32 +139,32 @@
         <div class="secure-note">🔒 Secure checkout. We never store your card details.</div>
       </div>
       <form class="checkout-form" id="checkoutForm">
-        <label>
-          <span>Full name</span>
-          <input type="text" name="name" placeholder="John Doe" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" placeholder="john@company.com" required>
-        </label>
-        <label>
-          <span>Company (optional)</span>
-          <input type="text" name="company" placeholder="Acme Inc.">
-        </label>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input class="input" id="name" type="text" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" id="email" type="email" name="email" placeholder="john@company.com" required>
+        </div>
+        <div class="field">
+          <label for="company">Company (optional)</label>
+          <input class="input" id="company" type="text" name="company" placeholder="Acme Inc.">
+        </div>
         <div class="card-row">
-          <label>
-            <span>Card number</span>
-            <input type="text" name="card" placeholder="4242 4242 4242 4242" maxlength="19" required>
-          </label>
+          <div class="field">
+            <label for="card">Card number</label>
+            <input class="input" id="card" type="text" name="card" placeholder="4242 4242 4242 4242" maxlength="19" required>
+          </div>
           <div class="card-meta">
-            <label>
-              <span>MM/YY</span>
-              <input type="text" name="expiry" placeholder="12/28" maxlength="5" required>
-            </label>
-            <label>
-              <span>CVC</span>
-              <input type="text" name="cvc" placeholder="123" maxlength="4" required>
-            </label>
+            <div class="field">
+              <label for="expiry">MM/YY</label>
+              <input class="input" id="expiry" type="text" name="expiry" placeholder="12/28" maxlength="5" required>
+            </div>
+            <div class="field">
+              <label for="cvc">CVC</label>
+              <input class="input" id="cvc" type="text" name="cvc" placeholder="123" maxlength="4" required>
+            </div>
           </div>
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-full">Pay $697</button>
