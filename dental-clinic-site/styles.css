@@ -455,11 +455,20 @@ a.ds-btn {
 
 /* Header */
 .dental-header {
-  composes: ds-header;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .dental-header-inner {
-  composes: ds-header-inner;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  gap: var(--space-4);
 }
 
 .dental-logo {
@@ -486,7 +495,8 @@ a.ds-btn {
 }
 
 .dental-nav {
-  composes: ds-nav;
+  display: flex;
+  gap: var(--space-8);
 }
 
 .dental-nav a {
@@ -539,10 +549,20 @@ a.dental-btn-secondary:hover {
   box-shadow: var(--shadow-md);
 }
 
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  color: var(--color-text);
+  padding: var(--space-2);
+}
+
 /* Hero */
 .hero {
   position: relative;
-  padding: var(--space-24) 0 var(--space-20);
+  padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-20);
   background: linear-gradient(160deg, #eff6ff 0%, var(--color-bg) 55%, #ffffff 100%);
   overflow: hidden;
 }
@@ -560,7 +580,7 @@ a.dental-btn-secondary:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: var(--space-12);
   align-items: center;
   position: relative;
@@ -622,6 +642,8 @@ a.dental-btn-secondary:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
+  max-width: 100%;
+  min-width: 0;
 }
 
 .hero-card {
@@ -633,6 +655,8 @@ a.dental-btn-secondary:hover {
   box-shadow: var(--shadow-xl);
   backdrop-filter: blur(10px);
   transition: transform var(--transition-base);
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .hero-card:hover {
@@ -667,6 +691,10 @@ a.dental-btn-secondary:hover {
 /* Sections */
 section {
   padding: var(--section-py) 0;
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + var(--space-6));
 }
 
 .section-header {
@@ -1030,5 +1058,35 @@ section {
   .hero-stats {
     flex-wrap: wrap;
     gap: var(--space-6);
+  }
+
+  .dental-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--dp-white);
+    flex-direction: column;
+    padding: var(--space-5) var(--space-6);
+    border-bottom: 1px solid var(--color-border-subtle);
+    gap: var(--space-4);
+    box-shadow: var(--shadow-md);
+  }
+
+  .dental-nav.open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .dental-header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .dental-header-inner > a:last-of-type {
+    display: none;
   }
 }

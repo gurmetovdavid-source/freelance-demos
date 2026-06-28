@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu
+  const menuBtn = document.createElement('button');
+  menuBtn.className = 'mobile-menu-btn';
+  menuBtn.innerHTML = '☰';
+  menuBtn.setAttribute('aria-label', 'Open menu');
+  const headerInner = document.querySelector('.header-inner');
+  const nav = document.querySelector('.nav');
+  headerInner.insertBefore(menuBtn, nav.nextSibling);
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuBtn.innerHTML = isOpen ? '✕' : '☰';
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.innerHTML = '☰';
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    });
+  });
+
   // Card number spacing
   const cardInput = document.querySelector('input[name="card"]');
   cardInput.addEventListener('input', (e) => {

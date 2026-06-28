@@ -3,19 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.createElement('button');
   menuBtn.className = 'mobile-menu-btn';
   menuBtn.innerHTML = '☰';
-  const headerInner = document.querySelector('.header-inner');
-  const nav = document.querySelector('.nav');
+  menuBtn.setAttribute('aria-label', 'Открыть меню');
+  const headerInner = document.querySelector('.dental-header-inner');
+  const nav = document.querySelector('.dental-nav');
   headerInner.insertBefore(menuBtn, nav.nextSibling);
 
   menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    menuBtn.innerHTML = nav.classList.contains('open') ? '✕' : '☰';
+    const isOpen = nav.classList.toggle('open');
+    menuBtn.innerHTML = isOpen ? '✕' : '☰';
+    menuBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
 
-  document.querySelectorAll('.nav a').forEach(link => {
+  document.querySelectorAll('.dental-nav a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       menuBtn.innerHTML = '☰';
+      menuBtn.setAttribute('aria-label', 'Открыть меню');
     });
   });
 
