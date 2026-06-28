@@ -322,6 +322,15 @@ a.ds-btn {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
+.ds-input:focus-visible,
+.ds-select:focus-visible,
+.ds-btn:focus-visible,
+a.dental-btn-primary:focus-visible,
+a.dental-btn-secondary:focus-visible {
+  outline: 3px solid var(--dental-primary);
+  outline-offset: 2px;
+}
+
 .ds-input::placeholder {
   color: var(--color-text-muted);
 }
@@ -664,8 +673,15 @@ a.dental-btn-secondary:hover {
 }
 
 .hero-card-icon {
-  font-size: var(--text-5xl);
-  margin-bottom: var(--space-4);
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-4);
+  color: var(--theme-primary);
+}
+
+.hero-card-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .hero-card h3 {
@@ -719,9 +735,14 @@ section[id] {
   border-radius: var(--radius-xl);
   display: grid;
   place-items: center;
-  font-size: var(--text-3xl);
+  color: var(--theme-primary);
   margin-bottom: var(--space-5);
   transition: transform var(--transition-fast);
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
 }
 
 .service-card:hover .service-icon {
@@ -787,9 +808,14 @@ section[id] {
   margin: 0 auto var(--space-5);
   display: grid;
   place-items: center;
-  font-size: var(--text-6xl);
+  color: var(--dp-slate-600);
   border: 4px solid var(--dp-white);
   box-shadow: var(--shadow-md);
+}
+
+.doctor-photo svg {
+  width: 64px;
+  height: 64px;
 }
 
 .doctor-card h3 {
@@ -877,6 +903,12 @@ section[id] {
 
 .appointment-form .ds-field label {
   color: var(--color-text-secondary);
+}
+
+.field-hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
 }
 
 .appointment-form .ds-input,

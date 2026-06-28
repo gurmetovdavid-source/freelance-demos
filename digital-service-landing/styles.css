@@ -442,14 +442,32 @@ section {
   border-radius: var(--radius-xl);
   display: grid;
   place-items: center;
-  font-size: var(--text-3xl);
+  color: var(--grow-primary);
   margin-bottom: var(--space-5);
   transition: transform var(--transition-fast);
   flex-shrink: 0;
 }
 
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
 .feature-card:hover .feature-icon {
   transform: scale(1.1);
+}
+
+.icon-check {
+  width: 18px;
+  height: 18px;
+  color: var(--grow-primary);
+  flex-shrink: 0;
+}
+
+.icon-lock-small {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .feature-card h3 {
@@ -633,6 +651,9 @@ section {
   border-radius: var(--radius-xl);
   font-size: var(--text-base);
   font-weight: var(--weight-bold);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .checkout-form {
@@ -658,6 +679,12 @@ section {
   letter-spacing: 0.03em;
 }
 
+.field-hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+}
+
 .input,
 .select {
   width: 100%;
@@ -676,6 +703,15 @@ section {
 .select:focus {
   border-color: var(--grow-primary);
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input:focus-visible,
+.select:focus-visible,
+.btn:focus-visible,
+a.btn-primary:focus-visible,
+a.btn-secondary:focus-visible {
+  outline: 3px solid var(--grow-primary);
+  outline-offset: 2px;
 }
 
 .input::placeholder {

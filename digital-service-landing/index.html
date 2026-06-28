@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <symbol id="icon-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v12"/><path d="M6 12h12"/><path d="M9 9l6 6"/><path d="M15 9l-6 6"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 6-7"/></symbol>
+    <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 2.5-1.5 4.5-1.5 4.5s2-.5 4.5-1.5l3-3"/><path d="M12 14l7-7a2.5 2.5 0 0 0-3.5-3.5L8.5 10.5"/><path d="M15 6l3 3"/><path d="M13 16l-4 4"/><circle cx="14" cy="9" r="2"/></symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.09 12.11a.5.5 0 0 0 .38.81H11v8l8.91-10.11a.5.5 0 0 0-.38-.81H13z"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  </svg>
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="logo">GrowFast</a>
@@ -58,32 +67,32 @@
       </div>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🎨</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-palette"></use></svg></div>
           <h3>Conversion-focused landing page</h3>
           <p>Custom-designed, mobile-first page built to turn visitors into leads and buyers.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">✉️</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></div>
           <h3>7-email nurture sequence</h3>
           <p>Pre-written, automated emails that build trust and drive sales on autopilot.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-chart"></use></svg></div>
           <h3>Analytics & tracking setup</h3>
           <p>Google Analytics, Meta Pixel, conversion events — all configured for you.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🚀</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-rocket"></use></svg></div>
           <h3>Ad creative starter kit</h3>
           <p>5 scroll-stopping ad concepts + copy variations to launch your first campaign.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-bolt"></use></svg></div>
           <h3>7-day delivery</h3>
           <p>We move fast. Your funnel is live and ready to test within one week.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🔒</div>
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-lock"></use></svg></div>
           <h3>100% ownership</h3>
           <p>You own the code, the copy, and the design. No lock-in, no subscriptions.</p>
         </div>
@@ -118,12 +127,12 @@
         <h2>Complete Funnel Package</h2>
         <div class="price">$697 <span>one-time</span></div>
         <ul class="pricing-list">
-          <li>✓ Custom landing page design + build</li>
-          <li>✓ 7-email automation sequence</li>
-          <li>✓ Analytics & pixel setup</li>
-          <li>✓ 5 ad creative concepts</li>
-          <li>✓ 1 round of revisions</li>
-          <li>✓ 7-day delivery guarantee</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> Custom landing page design + build</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> 7-email automation sequence</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> Analytics & pixel setup</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> 5 ad creative concepts</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> 1 round of revisions</li>
+          <li><svg class="icon-check" aria-hidden="true"><use href="#icon-check"></use></svg> 7-day delivery guarantee</li>
         </ul>
         <a href="#checkout" class="btn btn-primary btn-lg btn-full">Get started for $697</a>
         <p class="guarantee">30-day money-back guarantee if we don't deliver on time.</p>
@@ -136,7 +145,7 @@
       <div class="checkout-info">
         <h2>Complete your purchase</h2>
         <p>Fill in your details. After payment, you'll receive a short onboarding form and calendar link to book your kickoff call.</p>
-        <div class="secure-note">🔒 Secure checkout. We never store your card details.</div>
+        <div class="secure-note"><svg class="icon-lock-small" aria-hidden="true"><use href="#icon-lock"></use></svg> Secure checkout. We never store your card details.</div>
       </div>
       <form class="checkout-form" id="checkoutForm">
         <div class="field">
@@ -146,6 +155,7 @@
         <div class="field">
           <label for="email">Email</label>
           <input class="input" id="email" type="email" name="email" placeholder="john@company.com" required>
+          <span class="field-hint">На этот адрес придёт чек и инструкции</span>
         </div>
         <div class="field">
           <label for="company">Company (optional)</label>

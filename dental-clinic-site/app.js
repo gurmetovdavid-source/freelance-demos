@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.dental-nav');
   headerInner.insertBefore(menuBtn, nav.nextSibling);
 
+  menuBtn.setAttribute('aria-expanded', 'false');
+
   menuBtn.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuBtn.innerHTML = isOpen ? '✕' : '☰';
+    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     menuBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
 
@@ -18,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       menuBtn.innerHTML = '☰';
+      menuBtn.setAttribute('aria-expanded', 'false');
       menuBtn.setAttribute('aria-label', 'Открыть меню');
     });
   });
@@ -29,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     const data = Object.fromEntries(new FormData(form).entries());
     console.log('Appointment request:', data);
     modal.classList.add('active');
