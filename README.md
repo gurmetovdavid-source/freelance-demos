@@ -15,7 +15,7 @@
 
 ```bash
 # Клонировать репозиторий
-git clone git@github.com:gurmetovdavid-source/freelance-demos.git
+git clone https://github.com/gurmetovdavid-source/freelance-demos.git
 cd freelance-demos
 
 # Запустить лендинг стоматологии
