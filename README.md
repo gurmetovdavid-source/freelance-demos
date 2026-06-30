@@ -1,41 +1,33 @@
-# Freelance Demos Portfolio
+# Digital Service Landing Page Demo
 
-Репозиторий с демо-проектами для фриланс-портфолио. Все проекты основаны на реальных заказах с фриланс-площадок и выполнены в продакшен-качестве.
+Лендинг digital-услуги «GrowFast» — демо-проект для портфолио фрилансера.
 
-## Проекты
+## Что реализовано
 
-| Проект | Описание | Стек | Статус |
-|---|---|---|---|
-| [`dental-clinic-site`](./dental-clinic-site) | Лендинг стоматологической клиники | HTML, CSS, JS | ✅ Готов |
-| [`digital-service-landing`](./digital-service-landing) | Лендинг digital-услуги с чекаут-формой | HTML, CSS, JS | ✅ Готов |
-| [`telegram-escrow-bot`](./telegram-escrow-bot) | Telegram-бот для безопасных сделок | Python, aiogram | ✅ Готов |
-| [`design-system`](./design-system) | Общая дизайн-система | CSS | ✅ Готов |
+- Адаптивный одностраничный лендинг
+- Hero-секция с CTA
+- Секции: преимущества, результаты, цены, чекаут-форма, FAQ
+- Аккордеон FAQ
+- Форматирование номера карты и срока действия в чекаут-форме
+- Мобильное меню
+- Анимации появления при скролле
+- SVG-иконки
 
-## Быстрый старт
+## Как запустить
 
 ```bash
-# Клонировать репозиторий
-git clone https://github.com/gurmetovdavid-source/freelance-demos.git
-cd freelance-demos
-
-# Запустить лендинг стоматологии
-python -m http.server 8001 --directory dental-clinic-site
-
-# Запустить лендинг digital-услуги
-python -m http.server 8002 --directory digital-service-landing
-
-# Запустить Telegram-бота
-cd telegram-escrow-bot
-cp .env.example .env
-pip install -r requirements.txt
-python bot.py
+cd digital-service-landing
+python -m http.server 8002
 ```
+
+Или открыть `index.html` в браузере.
+
+## Важно
+
+Форма оплаты — UI-демо. Реальный платёжный процессор не подключён.
 
 ## Деплой
 
-- Статические лендинги можно развернуть на GitHub Pages, Netlify, Cloudflare Pages, Vercel.
-- Telegram-бот разворачивается на VPS или облачном сервере.
+Сайт можно развернуть на GitHub Pages, Netlify, Cloudflare Pages или любом статическом хостинге.
 
-## Контакты
-
-- GitHub: [@gurmetovdavid-source](https://github.com/gurmetovdavid-source)
+# trigger
