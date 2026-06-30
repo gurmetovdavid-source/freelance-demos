@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-enabled');
+
   // Mobile menu
   const menuBtn = document.createElement('button');
   menuBtn.className = 'mobile-menu-btn';
@@ -50,4 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.classList.remove('active');
   });
+
+  // Scroll reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .stagger-children').forEach(el => observer.observe(el));
 });

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Demos Portfolio</title>
+  <meta name="description" content="Портфолио фриланс-проектов: лендинги, сайты, Telegram-боты.">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.1);
+    }
+
+    .project-card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .project-card .stack {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+
+    .project-card a:hover {
+      background: var(--primary-hover);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Freelance Demos Portfolio</h1>
+    <p>Готовые демо-проекты для портфолио: лендинги, сайты и Telegram-боты. Всё в продакшен-качестве.</p>
+  </header>
+
+  <main class="projects">
+    <article class="project-card">
+      <h2>ДенталПро</h2>
+      <p>Лендинг стоматологической клиники с услугами, врачами, отзывами и формой онлайн-записи.</p>
+      <div class="stack">HTML · CSS · JavaScript</div>
+      <a href="./dental-clinic-site/index.html">Открыть проект</a>
+    </article>
+
+    <article class="project-card">
+      <h2>GrowFast</h2>
+      <p>Лендинг digital-услуги с ценами, чекаут-формой, FAQ и аккордеоном.</p>
+      <div class="stack">HTML · CSS · JavaScript</div>
+      <a href="./digital-service-landing/index.html">Открыть проект</a>
+    </article>
+
+    <article class="project-card">
+      <h2>Telegram Escrow Bot</h2>
+      <p>Бот для безопасных сделок: создание сделки, подтверждение, выплата, отмена и спор.</p>
+      <div class="stack">Python · aiogram</div>
+      <a href="./telegram-escrow-bot/">Открыть код</a>
+    </article>
+
+    <article class="project-card">
+      <h2>Design System</h2>
+      <p>Общая дизайн-система с токенами и компонентами для всех проектов.</p>
+      <div class="stack">CSS</div>
+      <a href="./design-system/">Открыть систему</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>Сделано для портфолио · <a href="https://github.com/gurmetovdavid-source">GitHub</a></p>
+  </footer>
+</body>
+</html>

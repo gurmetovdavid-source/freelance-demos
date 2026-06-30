@@ -1056,6 +1056,64 @@ section[id] {
   }
 }
 
+/* Scroll reveal animations — content visible by default, animated only when JS is ready */
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-enabled .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.js-enabled .stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-enabled .stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; }
+.js-enabled .stagger-children.visible > *:nth-child(2) { transition-delay: 60ms; }
+.js-enabled .stagger-children.visible > *:nth-child(3) { transition-delay: 120ms; }
+.js-enabled .stagger-children.visible > *:nth-child(4) { transition-delay: 180ms; }
+.js-enabled .stagger-children.visible > *:nth-child(5) { transition-delay: 240ms; }
+.js-enabled .stagger-children.visible > *:nth-child(6) { transition-delay: 300ms; }
+
+.js-enabled .stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button press feedback */
+.dental-btn-primary:active,
+a.dental-btn-primary:active,
+.dental-btn-secondary:active,
+a.dental-btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .stagger-children > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .modal-content h3 {
   font-size: var(--text-2xl);
   font-weight: var(--weight-bold);
